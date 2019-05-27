@@ -10,14 +10,53 @@ Supports [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubunt
 [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse],
 [Fedora 27][fedora], [Fedora 28][fedora], and [Arch Linux][arch].
 
-For Linux distributions that are not officially supported,
-you can try using the [PowerShell Snap Package][snap].
+
+For Linux distributions that are not officially supported, you can try using the [PowerShell Snap Package][snap].
 You can also try deploying PowerShell binaries directly using the Linux [`tar.gz` archive][tar],
 but you would need to set up the necessary dependencies based on the OS in separate steps.
 
 All packages are available on our GitHub [releases][] page.
 Once the package is installed, run `pwsh` from a terminal.
 
+## About Snapcraft (snapd)
+
+[Snapd][snapd] is the preferred package manager for Linux.
+
+  -- [PowerShell Core now available as a Snap package](https://devblogs.microsoft.com/powershell/powershell-core-now-available-as-a-snap-package/)
+
+  -- [Powershell launches as a Snap](https://blog.ubuntu.com/2018/07/20/powershell-launches-as-a-snap)
+
+If the `snap` command is not found, you need to install Snapd following [their instructions][can-i-use-snaps].
+Otherwise you may install PowerShell via [Direct Download](#installation-via-direct-download) or from [Binary Archives](#binary-archives).
+
+## Installation of latest stable release via Snapd
+
+See [About snap](#about-snap) for information about snap.
+
+Now, you can install PowerShell:
+
+```sh
+# Install PowerShell
+sudo snap install powershell --classic
+
+# Start PowerShell
+pwsh
+
+```
+
+## Installation of latest stable release via Snapd
+
+```sh
+# Install PowerShell Preview
+sudo snap install powershell-preview --classic
+
+# Start PowerShell Preview
+pwsh-preview
+
+```
+
+[snapd]: https://docs.snapcraft.io/getting-started
+[installing-snapd]: https://docs.snapcraft.io/installing-snapd
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
